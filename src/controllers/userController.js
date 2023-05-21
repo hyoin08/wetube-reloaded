@@ -67,7 +67,7 @@ export const startGithubLogin = (req, res) => {
     scope: "read:user user:email",
   };
   const params = new URLSearchParams(config).toString();
-  const finalUrl = `${baseUrl}${params}`;
+  const finalUrl = `${baseUrl}?${params}`;
   return res.redirect(finalUrl);
 };
 
